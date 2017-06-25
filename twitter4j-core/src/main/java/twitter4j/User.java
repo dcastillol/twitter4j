@@ -32,6 +32,12 @@ public interface User extends Comparable<User>, TwitterResponse, java.io.Seriali
     long getId();
 
     /**
+     * Return the user id in String format
+     * @return the id of the user
+     */
+    String getIdStr();
+
+    /**
      * Returns the name of the user
      *
      * @return the name of the user

@@ -67,6 +67,11 @@ final class LazyTwitterAPIConfiguration implements twitter4j.TwitterAPIConfigura
         return getTarget().getCharactersReservedPerMedia();
     }
 
+    @Override
+    public int getDmTextCharacterLimit() {
+        return 0;
+    }
+
 
     public Map<Integer, MediaEntity.Size> getPhotoSizes() {
         return getTarget().getPhotoSizes();

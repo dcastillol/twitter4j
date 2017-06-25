@@ -129,6 +129,19 @@ public interface TweetsResources {
      */
     Status retweetStatus(long statusId) throws TwitterException;
 
+
+    /**
+     * Unretweets a tweet. Returns the original tweet with retweet details embedded.
+     * <br>This method calls https://api.twitter.com/1.1/statuses/unretweet
+     *
+     * @param statusId The ID of the status to retweet.
+     * @return the retweeted status
+     * @throws TwitterException when Twitter service or network is unavailable
+     * @see <a href="https://dev.twitter.com/docs/api/1.1/post/statuses/unretweet/:id">POST statuses/retweet/:id | Twitter Developers</a>
+     * @since Twitter4J 2.0.10
+     */
+    Status unretweetStatus(long statusId) throws TwitterException;
+
     /**
      * Returns information allowing the creation of an embedded representation of a Tweet on third party sites. See the <a href="http://oembed.com/">oEmbed</a> specification for information about the response format.
      * While this endpoint allows a bit of customization for the final appearance of the embedded Tweet, be aware that the appearance of the rendered Tweet may change over time to be consistent with Twitter's <a href="https://dev.twitter.com/terms/display-requirements">Display Requirements</a>. Do not rely on any class or id parameters to stay constant in the returned markup.

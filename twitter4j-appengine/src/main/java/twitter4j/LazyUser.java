@@ -61,6 +61,11 @@ final class LazyUser implements twitter4j.User {
         return getTarget().getId();
     }
 
+    @Override
+    public String getIdStr() {
+        return getTarget().getIdStr();
+    }
+
 
     /**
      * Returns the name of the user
@@ -416,6 +421,16 @@ final class LazyUser implements twitter4j.User {
 
     public String[] getWithheldInCountries() {
         return getTarget().getWithheldInCountries();
+    }
+
+    @Override
+    public boolean isFollowing() {
+        return false;
+    }
+
+    @Override
+    public void setFollowing(boolean isFollowing) {
+
     }
 
     public RateLimitStatus getRateLimitStatus() {
